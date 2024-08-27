@@ -2,14 +2,14 @@ public class Solution {
     public static void symmetry(int n) {
         // Write your code here
          n = 2*n;
-        for(int row = 0; row < n-1; row++) {
-            for(int col = 0; col < n; col++) {
+        for(int i=1; i <= n; i++) {
+            for(int j = 1; j <= n; j++) {
                 // Condition for first half of the rows.
-                if (row < n/2 && (col <= row || col >= (n-row-1))) {
+                if (i < n/2 && (j <= i || j >= (n-i-1))) {
                     System.out.print("*");
                 }
                 // Condition for the second half of the rows.
-                else if (row >= n/2 && (col < (n-row-1) || col > row)) {
+                else if (i >= n/2 && (j < (n-i-1) || j > i)) {
                     System.out.print("*");
                 }
                 else {
